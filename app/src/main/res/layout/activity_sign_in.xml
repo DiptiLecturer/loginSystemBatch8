@@ -4,7 +4,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#0564DD17"
+    android:paddingHorizontal="10dp"
     android:orientation="vertical"
     tools:context=".SignUpActivity">
 
@@ -31,16 +32,20 @@
         android:textColor="#9D8989" />
 
     <EditText
+        android:background="@drawable/edit_text_backgroud"
         android:id="@+id/emailET"
         android:hint="Email"
+        android:paddingStart="10dp"
         android:inputType="textEmailAddress"
         android:layout_marginTop="10dp"
+        android:paddingVertical="10dp"
         android:textSize="18sp"
         android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:paddingStart="10dp"
         android:id="@+id/passET"
         android:hint="Password"
         android:inputType="textPassword"
@@ -59,7 +64,31 @@
         android:layout_marginTop="10dp"
         android:textSize="18sp"
         android:textColor="@color/white"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/navToSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:text="don't have an account?"
+        android:textColor="#9D8989" />
+    <TextView
+        android:id="@+id/navToSignUpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:layout_gravity="center"
+        android:text="Sign Up"
+        android:textStyle="bold"
+        android:textColor="#00B8D4" />
+
+
 
 </LinearLayout>

@@ -4,17 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class SignInActivity : AppCompatActivity() {
 
     private lateinit var myVariable: Button
     private lateinit var myET: EditText
-
+    private lateinit var myPass: EditText
+    private lateinit var navToSignUpBtn: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,16 +23,19 @@ class SignInActivity : AppCompatActivity() {
 
         myVariable = findViewById(R.id.signInBTN)
         myET = findViewById(R.id.emailET)
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        myPass = findViewById(R.id.passET)
+        navToSignUpBtn = findViewById(R.id.navToSignUpBtn)
 
         myVariable.setOnClickListener {
             Toast.makeText(this, "Sign in Successful", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this@SignInActivity, HomeScreenActivity::class.java))
+            finish()
         }
+
+        navToSignUpBtn.setOnClickListener {
+            startActivity(Intent(this, SignUpActivity::class.java))
+        }
+
+
     }
 }
