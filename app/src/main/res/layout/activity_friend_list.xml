@@ -5,6 +5,115 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#23712F2F"
     tools:context=".FriendListActivity">
+    <LinearLayout
+        android:id="@+id/topBarLL"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#2600FF00"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/cameraImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight=".2"
+            android:src="@drawable/ic_camera" />
+
+        <EditText
+            android:id="@+id/searchET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:hint="Search"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/msgImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight=".2"
+            android:src="@drawable/ic_msg" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:text="Friend List"
+        android:textColor="#00B8D4"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBarLL" />
+
+    <TextView
+        android:id="@+id/frOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Anik"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="229dp" />
+
+    <TextView
+        android:id="@+id/frTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Afraim"
+        android:textColor="#00BFA5"
+        android:layout_marginStart="210dp"
+        app:layout_constraintTop_toTopOf="@id/frOne"
+        app:layout_constraintStart_toEndOf="@id/frOne"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/frThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Ashraful"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/frOne"
+        app:layout_constraintStart_toStartOf="@id/frOne"
+        android:textColor="#00BFA5"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/frFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Fahim"
+        android:textColor="#00BFA5"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/frTwo"
+        app:layout_constraintEnd_toEndOf="@id/frTwo"
+        app:layout_constraintTop_toBottomOf="@id/frTwo"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

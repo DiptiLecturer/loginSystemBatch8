@@ -1,5 +1,6 @@
 package org.freedu.myfirstprojectb8
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -33,7 +34,8 @@ class SignInActivity : AppCompatActivity() {
         }
 
         navToSignUpBtn.setOnClickListener {
-            startActivity(Intent(this, SignUpActivity::class.java))
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
         }
 
 
