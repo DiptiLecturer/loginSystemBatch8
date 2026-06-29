@@ -21,7 +21,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-
         android:text="Hello! Good Afternoon"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -39,7 +38,6 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-
         app:layout_constraintStart_toStartOf="@id/greeting_text"
         app:layout_constraintTop_toBottomOf="@id/greeting_text" />
 
@@ -47,10 +45,157 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/ic_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/greeting_text"
         app:layout_constraintBottom_toBottomOf="@id/nameTV"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/greeting_text" />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <!-- First Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="#00BFA5"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/accountTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:text="Savings Account"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/balanceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="$10,000"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/accountTV"
+                        app:layout_constraintTop_toBottomOf="@id/accountTV"/>
+
+                    <TextView
+                        android:id="@+id/bookTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Book Balance"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@id/balanceTV"
+                        app:layout_constraintTop_toBottomOf="@id/balanceTV"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="See More"
+                        android:backgroundTint="@android:color/black"
+                        app:icon="@drawable/ic_email"
+                        app:iconGravity="textEnd"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Second Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="#304FFE"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/accountTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:text="Current Account"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/balanceTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="$5,500"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/accountTV2"
+                        app:layout_constraintTop_toBottomOf="@id/accountTV2"/>
+
+                    <TextView
+                        android:id="@+id/bookTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Available Balance"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@id/balanceTV2"
+                        app:layout_constraintTop_toBottomOf="@id/balanceTV2"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="See More"
+                        android:backgroundTint="@android:color/black"
+                        app:icon="@drawable/ic_email"
+                        app:iconGravity="textEnd"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
