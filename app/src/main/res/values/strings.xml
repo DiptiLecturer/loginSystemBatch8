@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyFirstProjectb8</string>
+    <string name="title">Friend List</string>
 
 </resources>
