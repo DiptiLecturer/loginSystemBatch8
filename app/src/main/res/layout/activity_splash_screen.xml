@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingHorizontal="10dp"
+    android:background="#A90091EA"
+    tools:context=".SplashScreen">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:padding="10dp"
+        android:id="@+id/titleImg"
+        android:src="@drawable/ic_lock"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+    <TextView
+        android:text="This is my Splash Screen"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:textSize="28sp"
+        android:id="@+id/subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
